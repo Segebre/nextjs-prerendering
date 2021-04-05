@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import SafeLink from '../src/components/safe-link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -58,20 +59,16 @@ export default function Home() {
           Juan Enrique Segebre Zaghmout
         </span>
         <div>
-          <a
+          <SafeLink
             href="https://github.com/Segebre"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <img src="/github.png" alt="Juan's GitHub page" className={styles.logo} />
-          </a>
-          <a
+          </SafeLink>
+          <SafeLink
             href="https://de.linkedin.com/in/segebre"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <img src="/linkedin.png" alt="Juan's LinkedIn page" className={styles.logo} />
-          </a>
+          </SafeLink>
         </div>
       </footer>
     </div>
