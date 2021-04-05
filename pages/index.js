@@ -51,14 +51,28 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+        <span>
+          Developed by
+        </span>
+        <span>
+          Juan Enrique Segebre Zaghmout
+        </span>
+        <div>
+          <a
+            href="https://github.com/Segebre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/github.png" alt="Juan's GitHub page" className={styles.logo} />
+          </a>
+          <a
+            href="https://de.linkedin.com/in/segebre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/linkedin.png" alt="Juan's LinkedIn page" className={styles.logo} />
+          </a>
+        </div>
       </footer>
     </div>
   )
