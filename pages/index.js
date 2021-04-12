@@ -16,7 +16,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Check out the different types of renderings using Next.js
+          Check out the different types of renderings available when using Next.js
         </p>
 
         <div className={styles.grid}>
