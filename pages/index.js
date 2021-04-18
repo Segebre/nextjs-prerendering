@@ -25,9 +25,9 @@ export default function Home() {
             <p>Static Generation without data.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="no-prerendering" className={styles.card}>
+            <h2>About &rarr;</h2>
+            <p>Without pre-rendering.</p>
           </a>
 
           <a
