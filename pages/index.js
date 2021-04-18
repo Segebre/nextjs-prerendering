@@ -25,27 +25,14 @@ export default function Home() {
             <p>Static Generation without data.</p>
           </a>
 
-          <a href="no-prerendering" className={styles.card}>
+          <a href="/no-prerendering" className={styles.card}>
             <h2>About &rarr;</h2>
             <p>Without pre-rendering.</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+          <a href="/posts" className={styles.card}>
+            <h2>Posts &rarr;</h2>
+            <p>Static Generation with data.</p>
           </a>
         </div>
       </main>
