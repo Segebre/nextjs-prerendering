@@ -1,0 +1,45 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.content a:hover, .content a:focus, .content a:active {
+  text-decoration: underline;
+}
+
+.list {
+  width: 100%;
+  max-width: 600px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.listItem {
+  list-style-type: none;
+  margin: 1rem;
+}
+
+a.post {
+  display: block;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  display: flex;
+  justify-content: center;
+}
+
+a.post:hover, a.post:focus, a.post:active {
+  color: #0070f3;
+  border-color: #0070f3;
+  text-decoration: none;
+}

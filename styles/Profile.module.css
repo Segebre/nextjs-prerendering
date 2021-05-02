@@ -1,0 +1,33 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.content a:hover,
+.content a:focus,
+.content a:active {
+  text-decoration: underline;
+}
+
+.content div + div {
+  margin-top: 16px;
+}
+
+.content dl {
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+}
+
+.content dt {
+  color: dimgray;
+}

@@ -1,0 +1,20 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content p {
+  text-align: center;
+  max-width: 600px;
+}
+
+.content a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.content a:hover, .content a:focus, .content a:active {
+  text-decoration: underline;
+}
+

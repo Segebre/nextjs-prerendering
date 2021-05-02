@@ -11,62 +11,53 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Pre-rendering using Next.js
-        </h1>
+        <h1 className={styles.title}>Pre-rendering using Next.js</h1>
 
         <p className={styles.description}>
-          Check out the different types of renderings available when using Next.js
+          Check out the different types of renderings available when using
+          Next.js
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="/about" className={styles.card}>
+            <h2>About &rarr;</h2>
+            <p>Static Generation without data.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="/no-prerendering" className={styles.card}>
+            <h2>About &rarr;</h2>
+            <p>Without pre-rendering.</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="/posts" className={styles.card}>
+            <h2>Posts &rarr;</h2>
+            <p>Static Generation with data.</p>
           </a>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+          <a href="/profile" className={styles.card}>
+            <h2>Profile &rarr;</h2>
+            <p>Server-side Rendering.</p>
           </a>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <span>
-          Developed by
-        </span>
-        <span>
-          Juan Enrique Segebre Zaghmout
-        </span>
+        <span>Developed by</span>
+        <span>Juan Enrique Segebre Zaghmout</span>
         <div>
-          <SafeLink
-            href="https://github.com/Segebre"
-          >
-            <img src="/github.png" alt="Juan's GitHub page" className={styles.logo} />
+          <SafeLink href="https://github.com/Segebre" noA11yIcon>
+            <img
+              src="/github.png"
+              alt="Juan's GitHub page"
+              className={styles.logo}
+            />
           </SafeLink>
-          <SafeLink
-            href="https://de.linkedin.com/in/segebre"
-          >
-            <img src="/linkedin.png" alt="Juan's LinkedIn page" className={styles.logo} />
+          <SafeLink href="https://de.linkedin.com/in/segebre" noA11yIcon>
+            <img
+              src="/linkedin.png"
+              alt="Juan's LinkedIn page"
+              className={styles.logo}
+            />
           </SafeLink>
         </div>
       </footer>
