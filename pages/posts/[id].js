@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { sleep } from '../../src/utils/api';
 import { formatDateString } from '../../src/utils/date';
+import { SafeLink } from '../../src/components/safe-link';
 import styles from '../../styles/Post.module.css';
 
 // Snippet based on code example from Next.js
@@ -48,6 +49,10 @@ function Post({ post }) {
 
   return (
     <div className={styles.content}>
+      <p>
+        All the data on this page is fetched from{' '}
+        <SafeLink href="https://www.mockapi.io/">mockapi.io</SafeLink>
+      </p>
       <div className={styles.header}>
         <h1 aria-describedby="info">{post.title}</h1>
         <div id="info">
