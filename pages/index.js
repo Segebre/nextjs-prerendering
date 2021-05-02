@@ -38,22 +38,22 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <span>
-          Developed by
-        </span>
-        <span>
-          Juan Enrique Segebre Zaghmout
-        </span>
+        <span>Developed by</span>
+        <span>Juan Enrique Segebre Zaghmout</span>
         <div>
-          <SafeLink
-            href="https://github.com/Segebre"
-          >
-            <img src="/github.png" alt="Juan's GitHub page" className={styles.logo} />
+          <SafeLink href="https://github.com/Segebre" noA11yIcon>
+            <img
+              src="/github.png"
+              alt="Juan's GitHub page"
+              className={styles.logo}
+            />
           </SafeLink>
-          <SafeLink
-            href="https://de.linkedin.com/in/segebre"
-          >
-            <img src="/linkedin.png" alt="Juan's LinkedIn page" className={styles.logo} />
+          <SafeLink href="https://de.linkedin.com/in/segebre" noA11yIcon>
+            <img
+              src="/linkedin.png"
+              alt="Juan's LinkedIn page"
+              className={styles.logo}
+            />
           </SafeLink>
         </div>
       </footer>
