@@ -11,12 +11,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Pre-rendering using Next.js
-        </h1>
+        <h1 className={styles.title}>Pre-rendering using Next.js</h1>
 
         <p className={styles.description}>
-          Check out the different types of renderings available when using Next.js
+          Check out the different types of renderings available when using
+          Next.js
         </p>
 
         <div className={styles.grid}>
@@ -33,6 +32,11 @@ export default function Home() {
           <a href="/posts" className={styles.card}>
             <h2>Posts &rarr;</h2>
             <p>Static Generation with data.</p>
+          </a>
+
+          <a href="/profile" className={styles.card}>
+            <h2>Profile &rarr;</h2>
+            <p>Server-side Rendering.</p>
           </a>
         </div>
       </main>
