@@ -28,7 +28,7 @@ function Posts({ posts }) {
       <h1>Posts</h1>
       <ul className={styles.list}>
         {posts.map(({ id, title }) => (
-          <li className={styles.listItem}>
+          <li key={id} className={styles.listItem}>
             <a href={`/posts/${id}`} className={styles.post}>
               {title}
             </a>
