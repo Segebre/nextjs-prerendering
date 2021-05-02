@@ -6,7 +6,12 @@
 }
 
 .content a {
+  color: #0070f3;
   text-decoration: none;
+}
+
+.content a:hover, .content a:focus, .content a:active {
+  text-decoration: underline;
 }
 
 .list {
@@ -21,7 +26,7 @@
   margin: 1rem;
 }
 
-.post {
+a.post {
   display: block;
   padding: 1.5rem;
   text-align: left;
@@ -33,18 +38,8 @@
   justify-content: center;
 }
 
-.post:hover, .post:focus, .post:active {
+a.post:hover, a.post:focus, a.post:active {
   color: #0070f3;
   border-color: #0070f3;
   text-decoration: none;
 }
-
-.back {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.back:hover, .back:focus, .back:active {
-  text-decoration: underline;
-}
-

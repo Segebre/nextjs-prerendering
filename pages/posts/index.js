@@ -35,9 +35,7 @@ function Posts({ posts }) {
           </li>
         ))}
       </ul>
-      <a href="/" className={styles.back}>
-        &larr; Return to examples
-      </a>
+      <a href="/">&larr; Return to examples</a>
     </div>
   );
 }

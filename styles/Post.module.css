@@ -6,7 +6,12 @@
 }
 
 .content a {
+  color: #0070f3;
   text-decoration: none;
+}
+
+.content a:hover, .content a:focus, .content a:active {
+  text-decoration: underline;
 }
 
 .header {
@@ -15,13 +20,4 @@
 
 .header h1 {
   margin-bottom: 0;
-}
-
-.back {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.back:hover, .back:focus, .back:active {
-  text-decoration: underline;
 }

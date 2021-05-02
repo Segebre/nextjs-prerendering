@@ -57,7 +57,7 @@ function Post({ post }) {
 
       <p>{post.content}</p>
 
-      <a href="/posts" className={styles.back}>
+      <a href="/posts">
         &larr; Return to posts
       </a>
     </div>
