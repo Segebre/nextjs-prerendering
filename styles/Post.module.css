@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.header {
+  margin-bottom: 44px;
+}
+
+.header h1 {
+  margin-bottom: 0;
+}
+
+.back {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.back:hover, .back:focus, .back:active {
+  text-decoration: underline;
+}

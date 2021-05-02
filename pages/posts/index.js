@@ -1,6 +1,6 @@
 // Static Generation with data
 
-import styles from '../styles/Posts.module.css';
+import styles from '../../styles/Posts.module.css';
 
 // Snippet based on code example from Next.js
 // https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation
