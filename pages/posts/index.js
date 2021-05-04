@@ -2,6 +2,7 @@
 
 import styles from '../../styles/Posts.module.css';
 import { SafeLink } from '../../src/components/safe-link';
+import NoPrefetchLink from '../../src/components/no-prefetching-link';
 
 // Snippet based on code example from Next.js
 // https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation
@@ -34,13 +35,13 @@ function Posts({ posts }) {
       <ul className={styles.list}>
         {posts.map(({ id, title }) => (
           <li key={id} className={styles.listItem}>
-            <a href={`/posts/${id}`} className={styles.post}>
+            <NoPrefetchLink href={`/posts/${id}`} className={styles.post}>
               {title}
-            </a>
+            </NoPrefetchLink>
           </li>
         ))}
       </ul>
-      <a href="/">&larr; Return to examples</a>
+      <NoPrefetchLink href="/">&larr; Return to examples</NoPrefetchLink>
     </div>
   );
 }
