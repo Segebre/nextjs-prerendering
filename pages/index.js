@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import SafeLink from '../src/components/safe-link';
+import NoPrefetchLink from '../src/components/no-prefetching-link';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -7,7 +8,10 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Next.js Pre-rendering</title>
-        <link rel="icon" href="/favicon.png" />
+        <link
+          rel="icon"
+          href={`${process.env.__NEXT_ROUTER_BASEPATH}/favicon.png`}
+        />
       </Head>
 
       <main className={styles.main}>
@@ -19,25 +23,25 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="/about" className={styles.card}>
+          <NoPrefetchLink href="/about" className={styles.card}>
             <h2>About &rarr;</h2>
             <p>Static Generation without data.</p>
-          </a>
+          </NoPrefetchLink>
 
-          <a href="/no-prerendering" className={styles.card}>
+          <NoPrefetchLink href="/no-prerendering" className={styles.card}>
             <h2>About &rarr;</h2>
             <p>Without pre-rendering.</p>
-          </a>
+          </NoPrefetchLink>
 
-          <a href="/posts" className={styles.card}>
+          <NoPrefetchLink href="/posts" className={styles.card}>
             <h2>Posts &rarr;</h2>
             <p>Static Generation with data.</p>
-          </a>
+          </NoPrefetchLink>
 
-          <a href="/profile" className={styles.card}>
+          <NoPrefetchLink href="/profile" className={styles.card}>
             <h2>Profile &rarr;</h2>
             <p>Server-side Rendering.</p>
-          </a>
+          </NoPrefetchLink>
         </div>
       </main>
 
@@ -47,14 +51,14 @@ export default function Home() {
         <div>
           <SafeLink href="https://github.com/Segebre" noA11yIcon>
             <img
-              src="/github.png"
+              src={`${process.env.__NEXT_ROUTER_BASEPATH}/github.png`}
               alt="Juan's GitHub page"
               className={styles.logo}
             />
           </SafeLink>
           <SafeLink href="https://de.linkedin.com/in/segebre" noA11yIcon>
             <img
-              src="/linkedin.png"
+              src={`${process.env.__NEXT_ROUTER_BASEPATH}/linkedin.png`}
               alt="Juan's LinkedIn page"
               className={styles.logo}
             />

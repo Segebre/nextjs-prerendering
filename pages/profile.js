@@ -2,6 +2,7 @@
 
 import { formatDateString } from '../src/utils/date';
 import { SafeLink } from '../src/components/safe-link';
+import NoPrefetchLink from '../src/components/no-prefetching-link';
 import styles from '../styles/Profile.module.css';
 
 // This gets called on every request
@@ -50,7 +51,7 @@ function Profile({ user }) {
         </div>
       </dl>
 
-      <a href="/">&larr; Return to examples</a>
+      <NoPrefetchLink href="/">&larr; Return to examples</NoPrefetchLink>
     </div>
   );
 }

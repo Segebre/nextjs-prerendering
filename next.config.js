@@ -7,4 +7,5 @@ module.exports = {
 
     return config;
   },
+  basePath: process.env.BASE_PATH || '',
 };

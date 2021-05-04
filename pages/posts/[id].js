@@ -3,6 +3,7 @@ import { sleep } from '../../src/utils/api';
 import { formatDateString } from '../../src/utils/date';
 import { SafeLink } from '../../src/components/safe-link';
 import styles from '../../styles/Post.module.css';
+import NoPrefetchLink from '../../src/components/no-prefetching-link';
 
 // Snippet based on code example from Next.js
 // https://nextjs.org/docs/basic-features/pages#scenario-2-your-page-paths-depend-on-external-datageneration
@@ -19,7 +20,7 @@ export async function getStaticPaths() {
   }));
 
   // We'll pre-render only these paths at build time.
-  return { paths, fallback: 'blocking' };
+  return { paths, fallback: true };
 }
 
 // Snippet based on code example from Next.js
@@ -62,9 +63,7 @@ function Post({ post }) {
 
       <p>{post.content}</p>
 
-      <a href="/posts">
-        &larr; Return to posts
-      </a>
+      <NoPrefetchLink href="/posts">&larr; Return to posts</NoPrefetchLink>
     </div>
   );
 }
