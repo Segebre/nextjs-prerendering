@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p ${HTTP_PORT:-3000}",
     "build": "next build",
-    "start": "next start -p 8080",
+    "build:clean": "rm -rf .next/",
+    "start": "next start -p ${HTTP_PORT:-3000}",
+    "prototype": "rm -rf .next/ && npm run build && npm run start",
     "test": "jest",
     "eslint-fix": "eslint --fix src/ pages/"
   },
