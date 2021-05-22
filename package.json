@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev -p ${HTTP_PORT:-3000}",
     "build": "next build",
+    "build:clean": "rm -rf .next/",
     "start": "next start -p ${HTTP_PORT:-3000}",
+    "prototype": "rm -rf .next/ && npm run build && npm run start",
     "test": "jest",
     "eslint-fix": "eslint --fix src/ pages/"
   },
