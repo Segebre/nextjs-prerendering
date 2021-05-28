@@ -8,7 +8,7 @@ import NoPrefetchLink from '../../src/components/no-prefetching-link';
 // https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation
 export async function getStaticProps() {
   const res = await fetch(
-    'https://607b6ab567e6530017573130.mockapi.io/posts?sortBy=id&order=desc'
+    'https://607b6ab567e6530017573130.mockapi.io/posts?sortBy=id&order=desc',
   );
   const posts = await res.json();
 
@@ -29,7 +29,8 @@ function Posts({ posts }) {
     <div className={styles.content}>
       <h1 aria-describedby="disclaimer">Posts</h1>
       <p id="disclaimer">
-        All the data on this page is fetched from{' '}
+        All the data on this page is fetched from
+        {' '}
         <SafeLink href="https://www.mockapi.io/">mockapi.io</SafeLink>
       </p>
       <ul className={styles.list}>

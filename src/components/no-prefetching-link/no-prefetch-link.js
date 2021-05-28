@@ -14,7 +14,7 @@ function pathNoQueryHash(path) {
   if (queryIndex > -1 || hashIndex > -1) {
     calculatedPath = path.substring(
       0,
-      queryIndex > -1 ? queryIndex : hashIndex
+      queryIndex > -1 ? queryIndex : hashIndex,
     );
   }
 
