@@ -3,6 +3,7 @@
 // Although I am unsure why, I think it might be
 // `process.env.__NEXT_ROUTER_BASEPATH` returning an empty sting in the server
 import { normalizePathTrailingSlash } from 'next/dist/client/normalize-trailing-slash';
+import { basePath } from '../../utils/constants';
 
 // code extracted from Next.js' source code and refactored
 // source: https://github.com/vercel/next.js/blob/3a78ccd43fb9ed8bf16bebc624cf2133cd69987a/packages/next/next-server/lib/router/router.ts#L145-L153
@@ -44,7 +45,7 @@ function addPathPrefix(path, prefix) {
 // we want to avoid pre-fetching due to the objective of this app
 // Unwanted code: https://github.com/vercel/next.js/blob/canary/packages/next/client/link.tsx#L284-L290
 const NoPrefetchLink = ({ href, children, ...props }) => {
-  const prefix = process.env.__NEXT_ROUTER_BASEPATH;
+  const prefix = basePath;
   const absoluteHref = addPathPrefix(href, prefix);
 
   return (
