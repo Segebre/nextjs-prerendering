@@ -8,7 +8,7 @@ module.exports = {
 
     return config;
   },
-  assetPrefix: process.env.BASE_PATH || '',
+  basePath: process.env.BASE_PATH || '',
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',
