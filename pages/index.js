@@ -1,7 +1,10 @@
 import NoPrefetchLink from '../src/components/no-prefetching-link';
 import styles from '../styles/Home.module.css';
+import { basePath } from '../src/utils/constants';
 
 export default function Home() {
+  console.log({ basePath, env: process.env.BASE_PATH });
+
   return (
     <>
       <h1 className={styles.title}>Pre-rendering using Next.js</h1>
