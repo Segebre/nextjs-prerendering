@@ -9,7 +9,7 @@ import NoPrefetchLink from '../../src/components/no-prefetching-link';
 // https://nextjs.org/docs/basic-features/pages#scenario-2-your-page-paths-depend-on-external-datageneration
 export async function getStaticPaths() {
   const res = await fetch(
-    'https://607b6ab567e6530017573130.mockapi.io/posts?sortBy=id&order=desc'
+    'https://607b6ab567e6530017573130.mockapi.io/posts?sortBy=id&order=desc',
   );
   const posts = await res.json();
   const latestThreePosts = posts.slice(0, 2);
@@ -30,7 +30,7 @@ export async function getStaticProps({ params }) {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
   const res = await fetch(
-    `http://607b6ab567e6530017573130.mockapi.io/posts/${params.id}`
+    `http://607b6ab567e6530017573130.mockapi.io/posts/${params.id}`,
   );
   const post = await res.json();
 
@@ -51,13 +51,17 @@ function Post({ post }) {
   return (
     <div className={styles.content}>
       <p>
-        All the data on this page is fetched from{' '}
+        All the data on this page is fetched from
+        {' '}
         <SafeLink href="https://www.mockapi.io/">mockapi.io</SafeLink>
       </p>
       <div className={styles.header}>
         <h1 aria-describedby="info">{post.title}</h1>
         <div id="info">
-          {post.author} - {formatDateString(post.createdAt)}
+          {post.author}
+          {' '}
+          -
+          {formatDateString(post.createdAt)}
         </div>
       </div>
 
