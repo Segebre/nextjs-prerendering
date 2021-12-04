@@ -21,14 +21,17 @@ function Profile({ user }) {
     <div className={styles.content}>
       <h1 aria-describedby="disclaimer">Profile</h1>
       <p id="disclaimer">
-        All the data on this page is fetched from{' '}
+        All the data on this page is fetched from
+        {' '}
         <SafeLink href="https://randomuser.me/">randomuser.me</SafeLink>
       </p>
       <dl>
         <div>
           <dt>Name</dt>
           <dd>
-            {user.name.first} {user.name.last}
+            {user.name.first}
+            {' '}
+            {user.name.last}
           </dd>
         </div>
 
@@ -45,7 +48,11 @@ function Profile({ user }) {
         <div>
           <dt>Member since</dt>
           <dd>
-            {formatDateString(user.registered.date)} ({user.registered.age}{' '}
+            {formatDateString(user.registered.date)}
+            {' '}
+            (
+            {user.registered.age}
+            {' '}
             years ago)
           </dd>
         </div>
