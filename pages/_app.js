@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Image from 'next/image';
+import { basePath } from '../src/utils/constants';
 import SafeLink from '../src/components/safe-link';
 import styles from '../styles/App.module.css';
 import '../styles/globals.css';
@@ -8,10 +10,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Pre-rendering using Next.js</title>
-        <link
-          rel="icon"
-          href={`${process.env.__NEXT_ROUTER_BASEPATH}/favicon.png`}
-        />
+        <link rel="icon" href={`${basePath}/favicon.png`} />
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
@@ -23,15 +22,19 @@ function MyApp({ Component, pageProps }) {
           <span>Juan Enrique Segebre Zaghmout</span>
           <div>
             <SafeLink href="https://github.com/Segebre" noA11yIcon>
-              <img
-                src={`${process.env.__NEXT_ROUTER_BASEPATH}/github.png`}
+              <Image
+                height={32}
+                width={32}
+                src={`${basePath}/github.png`}
                 alt="Juan's GitHub page"
                 className={styles.logo}
               />
             </SafeLink>
             <SafeLink href="https://de.linkedin.com/in/segebre" noA11yIcon>
-              <img
-                src={`${process.env.__NEXT_ROUTER_BASEPATH}/linkedin.png`}
+              <Image
+                height={32}
+                width={32}
+                src={`${basePath}/linkedin.png`}
                 alt="Juan's LinkedIn page"
                 className={styles.logo}
               />
