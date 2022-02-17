@@ -1,6 +1,9 @@
 import { render, screen } from '../../utils/testing';
 import SafeLink from '.';
 
+jest.mock('./external-link.svg', () => 'mocked-asset');
+jest.mock('./SafeLink.module.css', () => ({}));
+
 it('renders a secure anchor tag', () => {
   render(<SafeLink href="https://some.url">Some text</SafeLink>);
 
@@ -17,13 +20,21 @@ it('renders the children', () => {
 });
 
 it('allows target override', () => {
-  render(<SafeLink href="https://some.url" target="_self">Some text</SafeLink>);
+  render(
+    <SafeLink href="https://some.url" target="_self">
+      Some text
+    </SafeLink>,
+  );
 
   expect(screen.getByRole('link')).toHaveProperty('target', '_self');
 });
 
 it('does NOT allow security override', () => {
-  render(<SafeLink href="https://some.url" rel="some value">Some text</SafeLink>);
+  render(
+    <SafeLink href="https://some.url" rel="some value">
+      Some text
+    </SafeLink>,
+  );
 
   expect(screen.getByRole('link')).toHaveProperty('rel', 'noopener noreferrer');
 });
