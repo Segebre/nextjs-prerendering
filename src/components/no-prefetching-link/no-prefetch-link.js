@@ -43,7 +43,7 @@ function addPathPrefix(path, prefix) {
 // This component was created instead of Link because
 // Link does provide a way to avoid pre-fetching onMouseEnter
 // we want to avoid pre-fetching due to the objective of this app
-// Unwanted code: https://github.com/vercel/next.js/blob/canary/packages/next/client/link.tsx#L284-L290
+// Unwanted code: https://github.com/vercel/next.js/blob/canary/packages/next/client/link.tsx#L436-L438
 const NoPrefetchLink = ({ href, children, ...props }) => {
   const prefix = basePath;
   const absoluteHref = addPathPrefix(href, prefix);
